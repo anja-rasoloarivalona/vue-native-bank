@@ -1,11 +1,5 @@
 <template>
-  <safe-area-view class="container">
-      <text-input v-model="text" class="input"/>
-       <text-input v-model="text1" class="input"/>
-        <text-input v-model="text2" class="input"/>
-      <!-- <text class="text-color-primary">{{ text }}</text>
-      <button :title="text" @click="test"></button> -->
-  </safe-area-view>
+  <view>App</view>
 </template>
 
 <script>
