@@ -1,5 +1,5 @@
 <template>
-  <view>App</view>
+  <view>App 1</view>
 </template>
 
 <script>
