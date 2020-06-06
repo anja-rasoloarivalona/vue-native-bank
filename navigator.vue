@@ -3,19 +3,20 @@
 </template>
 
 <script>
-import { createAppContainer, createStackNavigator, createBottomTabNavigator } from 'vue-native-router'
+import { createAppContainer, createStackNavigator, createBottomTabNavigator, createSwitchNavigator } from 'vue-native-router'
 import HomeScreen from './screens/Home'
 import HistoryScreen from './screens/History'
+import StartupScreen from './screens/Startup'
 import React from 'react'
 import { Ionicons, MaterialIcons } from '@expo/vector-icons'
 
-const StackNavigator = createBottomTabNavigator(
+const BottomNavigator = createBottomTabNavigator(
     {
         Home: {
             screen: HomeScreen,
             navigationOptions: {
                 tabBarIcon: (info) => {
-                    return <MaterialIcons  name="home" size={25} color={info.tintColor}/>
+                    return <MaterialIcons  name="home" size={30} color={info.tintColor}/>
                 }
             }
         },
@@ -41,7 +42,11 @@ const StackNavigator = createBottomTabNavigator(
     }
 )
 
-const AppNavigator = createAppContainer(StackNavigator)
+const MainNavigator = createSwitchNavigator({
+    Startup: StartupScreen,
+    Main: BottomNavigator
+})
+const AppNavigator = createAppContainer(MainNavigator)
 
 export default {
     components: {
