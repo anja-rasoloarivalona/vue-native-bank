@@ -8,14 +8,21 @@
     "eject": "expo eject"
   },
   "dependencies": {
+    "@expo/vector-icons": "^10.2.0",
+    "axios": "^0.19.2",
     "expo": "~36.0.0",
     "react": "~16.9.0",
     "react-dom": "~16.9.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-36.0.0.tar.gz",
+    "react-native-gesture-handler": "^1.6.1",
+    "react-native-paper": "^3.10.1",
+    "react-native-reanimated": "^1.9.0",
+    "react-native-screens": "^2.8.0",
     "react-native-web": "~0.11.7",
     "vue-native-core": "^0.1.4",
     "vue-native-helper": "^0.1.4",
-    "vue-native-router": "^0.1.1"
+    "vue-native-router": "^0.1.1",
+    "vuex": "^3.4.0"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",

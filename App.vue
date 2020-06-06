@@ -1,8 +1,15 @@
 <template>
-  <view>App 1</view>
+  <view class="container">
+    <navigator />
+  </view>
 </template>
 
 <script>
+import Navigator from './navigator'
+import { Ionicons } from '@expo/vector-icons'
+import Vue from 'vue-native-core'
+Vue.component('icon', Ionicons)
+
 export default {
   data() {
     return {
@@ -18,6 +25,9 @@ export default {
     test () {
       console.log('clicked')
     }
+  },
+  components: {
+    Navigator
   }
 }
 
@@ -27,15 +37,5 @@ export default {
 <style>
 .container {
   flex: 1;
-  background-color: red;
-  /* padding-top: 30; */
-  align-items: center;
-  justify-content: flex-start;
-}
-.input {
-  background-color: white;
-  width: 90%;
-  padding: 10;
-  margin-bottom: 30;
 }
 </style>
