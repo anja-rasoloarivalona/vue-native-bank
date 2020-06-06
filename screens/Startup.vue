@@ -5,10 +5,22 @@
 </template>
 
 <script>
+import store from '../store'
 export default {
-   methods: {
-       
-   }     
+    mounted () {
+        this.tryLogin()
+    },
+    methods: {
+        tryLogin: async function () {
+                const isAuthed = await store.dispatch('tryLogin')
+                if(!isAuthed){
+                    this.navigation.navigate('Auth')
+                }
+        }
+    },
+    props: {
+        navigation: Object
+    }
 }
 </script>
 

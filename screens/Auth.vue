@@ -1,7 +1,7 @@
 <template>
-    <div>
-
-    </div>
+    <view class="screen">
+        <text>Auth</text>
+    </view>
 </template>
 
 <script>
@@ -11,5 +11,9 @@
 </script>
 
 <style lang="scss" scoped>
-
+.screen {
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
 </style>

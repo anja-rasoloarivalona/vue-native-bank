@@ -7,6 +7,7 @@ import { createAppContainer, createStackNavigator, createBottomTabNavigator, cre
 import HomeScreen from './screens/Home'
 import HistoryScreen from './screens/History'
 import StartupScreen from './screens/Startup'
+import AuthScreen from './screens/Auth'
 import React from 'react'
 import { Ionicons, MaterialIcons } from '@expo/vector-icons'
 
@@ -44,6 +45,7 @@ const BottomNavigator = createBottomTabNavigator(
 
 const MainNavigator = createSwitchNavigator({
     Startup: StartupScreen,
+    Auth: AuthScreen,
     Main: BottomNavigator
 })
 const AppNavigator = createAppContainer(MainNavigator)

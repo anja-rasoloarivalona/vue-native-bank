@@ -11,21 +11,6 @@ import Vue from 'vue-native-core'
 Vue.component('icon', Ionicons)
 
 export default {
-  data() {
-    return {
-      text: 'click',
-      text1: 'click',
-      text2: 'click'
-    }
-  },
-  mounted () {
-    console.log('mounted')
-  },  
-  methods: {
-    test () {
-      console.log('clicked')
-    }
-  },
   components: {
     Navigator
   }
