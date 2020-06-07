@@ -7,14 +7,19 @@
 <script>
 import store from '../store'
 export default {
-    mounted () {
-        this.tryLogin()
+    mounted: async function () {
+        await store.dispatch('logout')
+        this.checkIfUserIsAuthed()
     },
     methods: {
-        tryLogin: async function () {
-                const isAuthed = await store.dispatch('tryLogin')
+        checkIfUserIsAuthed: async function () {
+                console.log('checking')
+                const isAuthed = await store.dispatch('checkIfUserIsAuthed')
                 if(!isAuthed){
                     this.navigation.navigate('Auth')
+                } else {
+                    this.navigation.navigate('Main')
+                    console.log('connected')
                 }
         }
     },
